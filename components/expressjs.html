@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Express JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./expressjs.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html">Installation Guide</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+
+            <div class="flex-container">
+                <div class="installation">
+                    <h1 class="my-3">Installing</h1>
+                    <p>Step 1: Create a directory <br><code>mkdir exampleapp</code></p>
+                    <p>Step 2: Go to the directory <br><code>cd exampleapp</code></p>
+                    <p>Step 3: Open VS Code <br><code>code .</code></p>
+                    <p>Step 4: Create a package.json <br><code>npm init</code> or <code>npm init -y</code></p>
+                    <p>Step 5: Install Express <br><code>npm install express</code></p>
+                    <p>Step 6: Install nodemon (automatically restart the node application)
+                        <br><code>npm install -g nodemon</code> or <code>npm install --save-dev nodemon</code></p>
+                </div>
+                <div class="usage">
+                    <h1 class="my-3">Usage</h1>
+                    <p>Step 1: Create an index.js in root directory <br><code>index.js</code></p>
+                    <p>Step 2: inside -> index.js <br>
+                        <code>const express = require('express');</code><br>
+                        <code>const app = express();</code>
+                        <code>const port = 500;</code><br><br>
+                        <code>app.get('/', (req, res) => res.send('Hello World!'));</code><br><br>
+                        <code>app.listen(port, () => console.log(`Server is running from port: ${port}`));</code>
+                    </p>
+                    <p>Step 3: Inside package.json <br>
+                        <code>"scripts" : { "dev": "nodemon index.js"}</code>
+                    </p>
+                    <p>Step 4: Run local server <br><code>npm run dev</code></p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
